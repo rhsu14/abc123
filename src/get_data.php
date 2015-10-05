@@ -1,11 +1,7 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$db = "test";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $db);
 
+$my_db = new test\sql_db();
+$conn = $my_db->get_connection();
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
